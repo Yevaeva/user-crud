@@ -1,0 +1,6 @@
+export const ERROR = "ERROR";
+export const LOADING = "LOADING";
+export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS";
+export const REMOVE_USER_SUCCESS = "REMOVE_USER_SUCCESS";
+export const ADD_USER_SUCCESS = "ADD_USER_SUCCESS";
+export const EDIT_USER_SUCCESS = "EDIT_USER_SUCCESS";
