@@ -1,0 +1,38 @@
+@media screen and (max-width: 600px) {
+  table tbody {
+    border: none !important;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+  }
+
+  table td {
+    border: 1px solid #ddd !important;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}

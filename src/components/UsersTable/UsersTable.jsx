@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { useActions } from "../helpers/hooks/useActions";
-import AddUserModal from "./AddUserModal";
-import DeleteUserModal from "./DeleteUserModal";
+import { useActions } from "../../helpers/hooks/useActions";
+import AddUserModal from "../AddUserModal";
+import DeleteUserModal from "../DeleteUserModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import "./UsersTableStyle.css";
 
 const UsersTable = () => {
   const [toggleModal, setToggleModal] = useState(false);
@@ -52,10 +53,10 @@ const UsersTable = () => {
           {users?.map((user) => {
             return (
               <tr key={user._id}>
-                <td>{user.name + " " + user.surname}</td>
-                <td>{user.email}</td>
-                <td>{user.address}</td>
-                <td>{user.phone}</td>
+                <td data-label="Full name">{user.name + " " + user.surname}</td>
+                <td data-label="Email">{user.email}</td>
+                <td data-label="Address">{user.address}</td>
+                <td data-label="Phone">{user.phone}</td>
                 <td>
                   <div className="d-flex flex-column">
                     <Button

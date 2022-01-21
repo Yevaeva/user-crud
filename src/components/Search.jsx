@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormControl, InputGroup } from "react-bootstrap";
+import { Button, Col, FormControl, InputGroup, Row } from "react-bootstrap";
 import { useActions } from "../helpers/hooks/useActions";
 
 const Search = () => {
@@ -10,14 +10,18 @@ const Search = () => {
     getUsers({ search });
   };
   return (
-    <InputGroup className="mb-3">
-      <FormControl
-        placeholder="Search"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <Button onClick={handleSubmit}>Search</Button>
-    </InputGroup>
+    <Row>
+      <Col md="6" sm="12" className="m-auto">
+        <InputGroup className="mb-3">
+          <FormControl
+            placeholder="Search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <Button onClick={handleSubmit}>Search</Button>
+        </InputGroup>
+      </Col>
+    </Row>
   );
 };
 
