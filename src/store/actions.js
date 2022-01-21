@@ -1,7 +1,7 @@
 import request from "../helpers/request";
 import * as actionTypes from "./actionTypes";
 
-const apiUrl = "http://localhost:3007";
+const apiUrl = process.env.REACT_APP_API_HOST;
 
 export const getUsers = (data = {}) => {
   let url = `${apiUrl}/users`;
